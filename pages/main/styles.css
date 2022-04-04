@@ -1,8 +1,17 @@
+@font-face {
+    font-family: Arial;
+     src: url("../../assets/fonts/arial-regular.ttf");
+   }
+   @font-face {
+    font-family: Georgia;
+     src: url("../../assets/fonts/georgia-regular.ttf");
+   }
 * {
     box-sizing: border-box;
   }
   :root {
     --color-primary: #F1CDB3;
+    --color-dark:#CDCDCD;
   }
   
 
@@ -11,7 +20,6 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-
     max-width: 1280px;
     font-family: 'Arial';
     font-style: normal;
@@ -23,10 +31,11 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-.main-header{    
-    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) , #211F20;
+  .gradient-fon{
+   /* background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) , #211F20;*/
+   background: url(../../assets/images/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%)
+  }
 
-}
 .header-body{
     display: flex;
     justify-content: space-between;
@@ -44,11 +53,13 @@ font-weight: 400;
 font-size: 32px;
 line-height: 110%;
 color: var(--color-primary);
+margin: 0;
 }
 .logo__subtitle{
     color: #FFFFFF;
     font-size: 13px;
     line-height: 15px;
+    margin-top: 10px;
 }
 .nav__list {
     display: flex;
@@ -72,4 +83,59 @@ border-bottom:2px solid var(--color-primary);
 .nav__link:hover{
     border-bottom:2px solid var(--color-primary);
  color: #FAFAFA;
+}
+.start-screen{
+    margin-top: 60px;
+}
+
+.start-screen__content{
+    width: 38.5%; 
+    margin-top:163px ;
+}
+.start-screen-body{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.title{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+}
+.start-screen__title{
+    font-size: 44px;
+    color: #FFFFFF;
+    width: 310px;
+    margin: 0;
+}
+.start-screen_subtitle{
+    color: var(--color-dark);
+    margin-top: 42px;
+      
+}
+.button_primary{
+    background-color: var(--color-primary);
+    width: 207px;
+    height: 52px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    color:  #292929;
+}
+.start-screen__button{
+    margin-top: 42px;      
+}
+.screen__puppy{
+    background-image: url(../../assets/images/start-screen-puppy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-position: center;*/
+    width: 698px;
+    height: 728px;
 }
