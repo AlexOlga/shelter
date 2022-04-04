@@ -12,6 +12,9 @@
   :root {
     --color-primary: #F1CDB3;
     --color-dark:#CDCDCD;
+    --color-dark-title: #545454;
+    --color-dark-text:#4C4C4C;
+    --color-primary-light:#FDDCC4;
   }
   
 
@@ -103,6 +106,7 @@ border-bottom:2px solid var(--color-primary);
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
+    color: var(--color-dark-title);
 }
 .start-screen__title{
     font-size: 44px;
@@ -128,6 +132,9 @@ border-bottom:2px solid var(--color-primary);
     line-height: 130%;
     color:  #292929;
 }
+.button_primary:hover{
+    background-color: var(--color-primary-light);
+}
 .start-screen__button{
     margin-top: 42px;      
 }
@@ -135,7 +142,29 @@ border-bottom:2px solid var(--color-primary);
     background-image: url(../../assets/images/start-screen-puppy.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-position: center;*/
     width: 698px;
     height: 728px;
+}
+/*about*/
+.about{
+    margin-top: 80px;
+}
+.about__img{
+    background-image: url(../../assets/images/about-pets.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 408px;    
+}
+.about__text{
+color: var(--color-dark-text);
+margin-top: 25px;
+}
+.about-body{
+    display: flex;
+    justify-content:space-around;
+
+}
+.about__content{
+    width: 36%;   
 }
