@@ -288,3 +288,7 @@ line-height: 23px;
 margin-top: 30px;
 margin-bottom: 0px;
 }
+/*donation*/
+.donation{
+    background-color: var(--color-light);
+}
