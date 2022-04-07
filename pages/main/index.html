@@ -7,22 +7,24 @@
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" href="../../assets/icons/favicon.ico">
-    <title>About the shelter</title>
+    <title>Cozy House</title>
 </head>
 <body>
     <div class="gradient-fon">
     <header>
         <div class="wrapper header-body"> 
 <div class="logo"> 
+    <a class="logo_link" href="#">
     <h1 class="logo__title">Cozy House</h1>
     <span class="logo__subtitle">Shelter for pets in Boston</span>
+</a>
 </div>
 <div class="nav">
     <ul class="nav__list">
-        <li class="nav__item"><a href="" class="nav__link nav__link_active">About the shelter</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Our pets</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Help the shelter</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Contacts</a></li>
+        <li class="nav__item"><a href="/" class="nav__link nav__link_active">About the shelter</a></li>
+        <li class="nav__item"><a href="../pets/" class="nav__link">Our pets</a></li>
+        <li class="nav__item"><a href="#help" class="nav__link">Help the shelter</a></li>
+        <li class="nav__item"><a href="#footer" class="nav__link">Contacts</a></li>
       </ul>
 </div>
 </div>
@@ -32,14 +34,18 @@
            <div class="wrapper start-screen-body">
            <div class="start-screen__content">
                <h2 class="title start-screen__title">Not only people need a house</h2>
-               <div class="start-screen_subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</div>
+               <div class="start-screen_subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
+
+               </div>
+               <form action="#frends">
                 <button class="button_primary start-screen__button">Make a friend</button>
+            </form>
            </div>
            <div class="screen__puppy"></div>
         </div>
        </section>
     </div>
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
             <div class="about-body">
 <div class="about__img"></div>
@@ -51,7 +57,7 @@
             </div>
         </div>
     </section>
-    <section class="pets">
+    <section class="pets" id="frends">
         <div class="wrapper">
             <div class="pets__content">
                 <h2 class="title pets__title">Our friends who
@@ -75,12 +81,14 @@
     </div>
     <button class="button_arrow right-arrow">&#8594</button>
                     </div>
-                    <button class="button_primary pets__button">Get to know the rest</button>        
+                    <form action="../pets">
+                    <button class="button_primary pets__button">Get to know the rest</button>  
+                    </form>   
         </div>
 
         </div>
     </section>
-    <section class="help">
+    <section class="help" id="help">
         <div class="wrapper">
             <div class="help-content">
                 <h2 class="title help__title">How you can help our shelter</h2>
@@ -133,12 +141,14 @@
 <div class="donation-content">
     <h2 class="title donation-content__title">You can also make a donation</h2>
     <h3 class="title donation-content__subtitle">Name of the bank / Type of bank account</h3>
-    <button class="button_primary donation-content__button">
-        <p class="donation-content__button-text">
-            <img class="donation-content__img-card" src="../../assets/icons/credit-card.svg" alt="credit card">
-            8380 2880 8028 8791 7435
-        </p>
-        </button>
+        <div class="donation-content__button">
+        <a class="dotation__link" href="#">
+            <p class="donation-content__button-text">
+                <img class="donation-content__img-card" src="../../assets/icons/credit-card.svg" alt="credit card">
+                8380 2880 8028 8791 7435
+            </p>
+             </a>
+            </div>
     <div class="dotation-content__text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
         </div>
     </div>
@@ -146,23 +156,38 @@
 
     </section>
    </main>
-   <footer class="footer">
+   <footer class="footer" id="footer">
     <div class="wrapper"> 
         <div class="footer-content">
             <div class="footer-contact">
                 <h3 class="title footer-content__title">For questions and suggestions</h3>
+                <a class="email__link" href="mailto:email@shelter.com">
                 <img class="footer__ico" src="../../assets/icons/icon-email.svg" alt="icon email">
+            </a>
+            <a class="email__link" href="mailto:email@shelter.com">
                 <p class=" title footer__text"> email@shelter.com </p>
+            </a>
+            <a class="email__link" href="tel:+136745677554">
                 <img class="footer__ico" src="../../assets/icons/icon-phone.svg" alt="icon phone">
-
+            </a>
+            <a class="email__link" href="tel:+136745677554">
                 <p class=" title footer__text"> +13 674 567 75 54</p>
+            </a>
             </div>
             <div class="footer-locations">
                 <h3 class="title footer-content__title"> We are waiting for your visit</h3>
+                <a class="email__link" href="https://www.google.com/maps/search/?api=1&query=Bostonlink+Central+Street" target="_blank">
                 <img class="footer__ico" src="../../assets/icons/icon-marker.svg" alt="icon marker">
+                </a>
+                <a class="email__link" href="https://www.google.com/maps/search/?api=1&query=Bostonlink+Central+Street" target="_blank">
                 <p class=" title footer__text"> 1 Central Street, Boston (entrance from the store)</p>
+                </a>
+                <a class="email__link" href="https://www.google.com/maps/search/?api=1&query=london+south+park" target="_blank">
                <img class="footer__ico" src="../../assets/icons/icon-marker.svg" alt="icon marker">
+                </a>
+                <a class="email__link" href="https://www.google.com/maps/search/?api=1&query=london+south+park" target="_blank">
             <p class=" title footer__text"> 18 South Park, London </p>
+        </a>
             </div>
             <img class="footer__img" src="../../assets/images/footer-puppy.png" alt="puppy"> 
            
