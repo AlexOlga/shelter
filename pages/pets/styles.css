@@ -1,0 +1,103 @@
+@font-face {
+    font-family: Arial;
+     src: url("../../assets/fonts/arial/arial-regular.ttf");
+   }
+   @font-face {
+    font-family: Georgia;
+     src: url("../../assets/fonts/georgia/georgia-regular.ttf");
+   }
+   html{
+    scroll-behavior: smooth; 
+   }
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    --color-primary: #F1CDB3;
+    --color-dark:#CDCDCD;
+    --color-dark-title: #545454;
+    --color-dark-text:#4C4C4C;
+    --color-primary-light:#FDDCC4;
+    --color-light:#F6F6F6;
+    --color-subtitle:#292929;
+  }
+  
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: #fff;  
+  }
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .title{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;  
+    color:var(--color-dark-title); 
+  }
+  .subtitle{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+     letter-spacing: 0.1em;
+    color: var(--color-subtitle);
+  }
+  /*header*/
+  .header{
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+.header-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  .logo_link{
+    text-decoration: none;
+  }
+  .logo__title{    
+    font-size: 32px;
+    line-height: 35px;    
+    margin-top: 0px; 
+    margin-bottom: 10px;
+  }
+ .logo__subtitle{
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;   
+}
+.nav__link{ 
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;       
+    color: var(--color-dark-title);
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+.nav__item{
+text-decoration: none;
+}
+.nav__link_active{
+border-bottom:2px solid var(--color-primary);
+ color: var(--color-subtitle);
+}
+.nav__link:hover{
+   color:var(--color-subtitle);
+}
