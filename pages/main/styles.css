@@ -277,6 +277,7 @@ height: 52px;
 background-color: #FAFAFA;
 border: 2px solid var(--color-primary);
 border-radius: 100px;
+cursor: pointer;
 transition: .3s;
 margin-top: 8px;
 }
