@@ -98,7 +98,7 @@
 text-decoration: none;
 }
 .nav__link_active{
-border-bottom:2px solid var(--color-primary);
+border-bottom:3px solid var(--color-primary);
  color: var(--color-subtitle);
 }
 .nav__link:hover{
