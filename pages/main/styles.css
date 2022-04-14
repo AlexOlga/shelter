@@ -161,12 +161,22 @@ border-bottom:3px solid var(--color-primary);
 .start-screen__button{
     margin-top: 42px;      
 }
-.screen__puppy{
+/*.screen__puppy{
     background-image: url(../../assets/images/start-screen-puppy.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 698px;
     height: 728px;
+}*/
+.wraper__puppy{
+    width: 698px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+.screen__puppy{
+    width: 100%;
 }
 /*about*/
 .about{
@@ -483,10 +493,15 @@ align-self:flex-end;
           display: flex;
           justify-content: center;
       }
-      .screen__puppy{
+
+     /* .screen__puppy{
          margin-left:auto;
-          width: 569px;
+        width: 569px;
           height: 593px;
+        }*/
+        .wraper__puppy{
+            margin-left:auto;
+            width: 569px; 
         }
 
         .help-list{
@@ -542,9 +557,14 @@ align-self:flex-end;
 }
 
 @media screen and (max-width: 767px) {
+    .wrapper {
+        /*min-width: 300px;*/
+      min-width: 95%; 
+    }
  .header-body {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 .burger{
     display: block;
@@ -553,6 +573,7 @@ align-self:flex-end;
     height: 22px;
     z-index: 30;
     transition: 0.5s all ease 0s;
+    margin-left: 43px;
 }
 .burger::before, .burger::after{
     background-color:var(--color-primary);
@@ -644,4 +665,37 @@ left:0px;
    .look{
         overflow: hidden;      
       }
+      .start-screen{
+          margin: 0 auto;
+      }
+      .start-screen__content{
+          width: 90%;
+      }
+      .start-screen-body{
+          margin: 0 auto;
+      }
+      .start-screen__title {
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+          }
+        .start-screen_subtitle{
+            text-align: center;
+        }
+      /*  .screen__puppy {          
+          width: 260px;
+            height: 271px;
+        }*/
+     .wraper__puppy{            
+            width: 260px; 
+        }
+}
+@media screen and (max-width: 320px) {
+    .header-body {
+        display: flex;
+        justify-content: start;
+    }
+    .start-screen__content{
+        width: 100%;
+    }
 }
