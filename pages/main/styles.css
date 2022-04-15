@@ -61,16 +61,17 @@ font-family: 'Georgia';
 font-style: normal;
 font-weight: 400;
 font-size: 32px;
-line-height: 110%;
+line-height: 35px;
 letter-spacing: 0.06em;
 color: var(--color-primary);
 margin: 0;
+margin-bottom: 7px;
 }
 .logo__subtitle{
     color: #FFFFFF;
     font-size: 13px;
     line-height: 15px;
-    margin-top: 10px;
+   padding-left: 4px;
     letter-spacing: 0.1em;
 
 }
@@ -91,6 +92,9 @@ margin: 0;
 text-decoration: none;
 }
 .nav__link_active{
+    font-size: 15px;
+line-height: 24px;
+padding-bottom: 6px;
 border-bottom:3px solid var(--color-primary);
  color: #FAFAFA;
 }
@@ -146,10 +150,11 @@ border-bottom:3px solid var(--color-primary);
     border-radius: 100px;
     border: 1px solid var(--color-primary);
     font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 22px;
+letter-spacing: 0.06em;
     color:  #292929;
     
     cursor: pointer;
@@ -161,13 +166,7 @@ border-bottom:3px solid var(--color-primary);
 .start-screen__button{
     margin-top: 42px;      
 }
-/*.screen__puppy{
-    background-image: url(../../assets/images/start-screen-puppy.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 698px;
-    height: 728px;
-}*/
+
 .wraper__puppy{
     width: 698px;
     display: flex;
@@ -184,12 +183,11 @@ border-bottom:3px solid var(--color-primary);
     padding-bottom: 100px;
 }
 .about__img{
-    background-image: url(../../assets/images/about-pets.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 300px;
-    height: 408px;    
-   /* margin-left: 50px;*/
+ 
+}
+.img{
+    width: 100%;
 }
 .about__title{
     width: 80%;
@@ -207,8 +205,8 @@ margin-top: 25px;
 
 }
 .about__content{
-   /* width: 36%;   */
-   width: 430px;
+    width: 36%;   
+  /* width: 430px;*/
    margin-left: 120px;
    
 }
@@ -230,8 +228,8 @@ margin-top: 25px;
 .pets__title{
  text-align: center;
     letter-spacing: 0.05em;
-   /* width: 33.33%;*/
-   width: 400px;
+  width: 34%;
+  /* width: 400px;*/
     margin: 0px auto;
 }
 .pets__slider{
@@ -331,11 +329,26 @@ justify-items :center;
     justify-content:center;
 
 }
+.help-card{
+    width: 170px;
+    height: 113px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    justify-content: space-between;
+}
+.help-card_ico{
+    width: 60px;
+    height: 60px;
+}
 .help-card_title{
     font-size: 20px;
 line-height: 23px;
-margin-top: 25px;
 margin-bottom: 0px;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+letter-spacing: 0.06em;
 }
 /*donation*/
 .donation{
@@ -349,23 +362,24 @@ margin-bottom: 0px;
     align-items:center;
 }
 .donation-content{
-    /*  width: 41%;*/
-  width: 380px;
+    
+ width: 380px; 
+
 }
 .dontion_img{
-    background-image: url(../../assets/images/donation-dog.png);
+   /* background-image: url(../../assets/images/donation-dog.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     width: 505px;
-    height: 261px;
-   margin-right: 30px;
+   /* height: 261px;
+   margin-right: 30px;*/
 }
 
 .donation-content__title{
     width: 300px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .donation-content__subtitle{
@@ -373,7 +387,7 @@ margin-bottom: 0px;
     line-height: 17px;
     margin-top: 0px;
     margin-bottom: 20px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
 }
 .donation-content__button {
     background: var(--color-primary);
@@ -475,6 +489,10 @@ align-self:flex-end;
 @media screen and (max-width: 1279px) {
     .header-body {
        margin: 30px;
+       margin-bottom: 0px;
+    }
+    .start-screen{
+        padding-top: 57px;
     }
     .wrapper {
         min-width: 708px;
@@ -493,31 +511,39 @@ align-self:flex-end;
           display: flex;
           justify-content: center;
       }
-
-     /* .screen__puppy{
-         margin-left:auto;
-        width: 569px;
-          height: 593px;
-        }*/
+      .start-screen__button {
+        margin-top: 39px;
+    }
         .wraper__puppy{
             margin-left:auto;
             width: 569px; 
         }
-
+/*about*/
+.about {
+    padding-top: 65px;
+    padding-bottom: 92px;
+}
         .help-list{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             padding-left: 0px;
            padding-right: 0px;
+           padding-top: 58px;
+           column-gap: 40px;
+           row-gap: 55px;
            width: 85%;
            justify-items:center;
            justify-content: center;
            margin: 0 auto;
                
         }
+        .help-card{
+            justify-self:center;
+         
+        }
         .donation{
            
-            padding: 80px 0px 100px 0px;
+            padding: 80px 0px 95px 0px;
         }
         .donation-body{
             display:flex;
@@ -532,6 +558,7 @@ align-self:flex-end;
         .footer{
             padding: 30px 30px 0px 30px;
         }
+
 }
 @media screen and (max-width: 1000px) {
     .about-body{
@@ -541,30 +568,66 @@ align-self:flex-end;
     .about__content{
         margin: 0 auto;
         margin-bottom: 80px; 
+        width: 56%;   
     }
-    .last-card{
+    .pets__title {
+        width: 52%;            
+        }
+    [data-name="woody"]{
         display: none;
+    }
+    .pets__slider{
+        column-gap: 0px;
+        justify-content:space-between;
+    }
+    .left-arrow{
+        margin-left: 20px;
+    }
+    .right-arrow{
+        margin-right: 20px;
     }
     .footer-content {
         display: grid;
         grid-template-columns: 1fr 1fr;       
      justify-content: center;
      justify-items: center;
+     column-gap:42px ;
     }
+  .footer-content__title{
+      margin-top: 0px;
+      
+  }
+  .footer-contact{
+      row-gap: 35px;
+      margin-bottom: 60px;
+      justify-self:center;
+  }
+  .footer-locations{
+      row-gap: 40px;
+    justify-self:start;
+  }
     .footer__img{
         grid-column : span 2;
+    }
+    .email__link{
+        font-size: 20px;
+line-height: 23px;
+
+letter-spacing: 0.06em;
     }
 }
 
 @media screen and (max-width: 767px) {
     .wrapper {
-        /*min-width: 300px;*/
+        width: 95%;
       min-width: 95%; 
     }
  .header-body {
         display: flex;
-        justify-content: space-between;
+       justify-content: space-around;
         align-items: center;
+        margin:30px 10px 0px 10px;
+
     }
 .burger{
     display: block;
@@ -574,6 +637,7 @@ align-self:flex-end;
     z-index: 30;
     transition: 0.5s all ease 0s;
     margin-left: 43px;
+    
 }
 .burger::before, .burger::after{
     background-color:var(--color-primary);
@@ -619,8 +683,6 @@ align-self:flex-end;
 }
 .nav__list {
     flex-direction: column;
-   /* justify-content: center;
-    align-items: center;  */
     padding: 0px;  
 }
 .nav__item{
@@ -682,14 +744,135 @@ left:0px;
         .start-screen_subtitle{
             text-align: center;
         }
-      /*  .screen__puppy {          
-          width: 260px;
-            height: 271px;
-        }*/
-     .wraper__puppy{            
+        .wraper__puppy{            
             width: 260px; 
         }
+        /*about*/
+        .about{
+            padding:42px 0px;
+        }
+        .about__content{
+            margin-bottom: 42px;
+          padding-left: 15px;  
+          padding-right: 15px;
+        
+        }
+        .about__title{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 25px;
+        }
+        /*pets*/
+        .pets{
+         padding:42px 0px;
+            }
+            .pets__title {
+                text-align: center;
+              font-size: 25px;             
+            }
+            [data-name="jennifer"]{
+                display: none;
+            }
+                      
+           .pets__slider{
+              display: grid;
+            grid-template-areas:
+             "card card"
+             "arrowLeft arrowRight";
+             column-gap:80px;
+             row-gap: 20px;
+             justify-content: center;
+             margin-top: 42px;
+             margin-bottom: 42px;
+            }
+            .pets__card{
+                grid-area: card;
+            }
+           .left-arrow{
+            grid-area: arrowLeft;
+            justify-self:end;
+            }
+          .right-arrow {
+            grid-area: arrowRight;
+            justify-self:start;
+          }
+          /*help*/
+          .help{
+             padding: 42px 0px;
+          }
+       
+          .help__title {
+              width: 95%;
+            text-align: center;
+            font-size: 25px;    
+          }
+          .help-list{
+            padding-top: 42px;
+            grid-template-columns: repeat(2, 1fr);
+           /* gap: 10%;*/
+        }
+        /*doation*/
+        .donation{
+            padding: 42px 0px;
+        }
+        .donation-content__title{
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            margin: 0 auto;
+            width: 60%;
+        }
+        .donation-content__subtitle{
+            margin: 20px auto;
+            text-align: center;
+        }
+        .dontion_img{
+            margin-top: 42px;
+            width: 83%;
+        }
+   .card-number{
+       font-size: 15px;
+   }
+.donation-content__button{
+    margin: 0 auto;
+    margin-bottom:20px;
+    width: 281px;
 }
+/*footer*/
+.footer{
+    padding: 30px 0 0 0 ;
+}
+.footer-content{
+    grid-template-columns: 1fr;
+}
+.footer__img{
+    grid-column: span 1;
+    align-self:end;
+    display: flex;
+    align-items: flex-end;
+}
+.footer-content__title{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0px;
+}
+    }
+
+    @media screen and (max-width: 500px) {
+        .about__content{
+            width: 100%;
+        }
+        .pets__title {
+        width: 100%;            
+        }
+      .donation-content{
+          width: 300px;
+      }
+      .footer__img{
+          width: 260px;
+      }
+
+    } 
 @media screen and (max-width: 320px) {
     .header-body {
         display: flex;
@@ -698,4 +881,5 @@ left:0px;
     .start-screen__content{
         width: 100%;
     }
+   
 }
