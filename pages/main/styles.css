@@ -329,6 +329,24 @@ justify-items :center;
     justify-content:center;
 
 }
+.help-card_title{
+    font-size: 20px;
+line-height: 23px;
+margin-top: 25px;
+margin-bottom: 0px;
+}
+/*.help-list{
+    display: flex;
+    flex-wrap: wrap; 
+    column-gap: 130px;
+   row-gap:55px;
+   padding-left: 87px;
+   padding-right: 87px;
+   padding-top: 60px;
+justify-items :center;
+    justify-content:center;
+
+}
 .help-card{
     width: 170px;
     height: 113px;
@@ -349,7 +367,7 @@ font-size: 20px;
 line-height: 23px;
 text-align: center;
 letter-spacing: 0.06em;
-}
+}*/
 /*donation*/
 .donation{
     background-color: var(--color-light);
@@ -473,7 +491,7 @@ color: #B2B2B2;
 }
 .footer__img{
     width: 300px;
-height: 310px;
+/*height: 310px;*/
 align-self:flex-end;  
 } 
 
@@ -538,8 +556,15 @@ align-self:flex-end;
                
         }
         .help-card{
-            justify-self:center;
-         
+            width: 170px;
+            height: 113px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+            justify-content: space-between;
+        }
+        .help-card{
+            justify-self:center;         
         }
         .donation{
            
@@ -620,13 +645,14 @@ letter-spacing: 0.06em;
 @media screen and (max-width: 767px) {
     .wrapper {
         width: 95%;
-      min-width: 95%; 
+      min-width: 300px; 
+      margin: 0 auto;
     }
  .header-body {
         display: flex;
-       justify-content: space-around;
+       justify-content: space-between;
         align-items: center;
-        margin:30px 10px 0px 10px;
+        margin:30px 0 0 0px ;
 
     }
 .burger{
@@ -636,8 +662,8 @@ letter-spacing: 0.06em;
     height: 22px;
     z-index: 30;
     transition: 0.5s all ease 0s;
-    margin-left: 43px;
-    
+    margin: 0px 53px 0px 10px;
+        
 }
 .burger::before, .burger::after{
     background-color:var(--color-primary);
@@ -679,7 +705,7 @@ letter-spacing: 0.06em;
 }
 .logo{
     position: relative;
-    z-index: 3;
+    z-index: 5;
 }
 .nav__list {
     flex-direction: column;
@@ -729,6 +755,7 @@ left:0px;
       }
       .start-screen{
           margin: 0 auto;
+          padding-top: 55px;
       }
       .start-screen__content{
           width: 90%;
@@ -738,21 +765,28 @@ left:0px;
       }
       .start-screen__title {
         font-size: 25px;
+      line-height: 32px;
+      letter-spacing: 0.06em;
         width: 100%;
         text-align: center;
           }
+
         .start-screen_subtitle{
             text-align: center;
         }
         .wraper__puppy{            
             width: 260px; 
         }
+        .start-screen__content{
+            margin-bottom: 107px;
+        }
         /*about*/
         .about{
-            padding:42px 0px;
+            padding-top:42px;
+            padding-bottom: 35px;
         }
         .about__content{
-            margin-bottom: 42px;
+            margin-bottom: 39px;
           padding-left: 15px;  
           padding-right: 15px;
         
@@ -761,6 +795,9 @@ left:0px;
             margin: 0 auto;
             text-align: center;
             font-size: 25px;
+        }
+        .about__img{
+            width: 260px;
         }
         /*pets*/
         .pets{
@@ -783,7 +820,7 @@ left:0px;
              row-gap: 20px;
              justify-content: center;
              margin-top: 42px;
-             margin-bottom: 42px;
+             margin-bottom: 40px;
             }
             .pets__card{
                 grid-area: card;
@@ -809,20 +846,38 @@ left:0px;
           .help-list{
             padding-top: 42px;
             grid-template-columns: repeat(2, 1fr);
-           /* gap: 10%;*/
+           row-gap: 30px;
+           column-gap: 35px;
+        }
+        .help-card{
+            width: 130px;
+            height: 87px;
+        }
+        .help-card_ico{
+            width: 50px;
+            height: 50px;
+        }
+        .help-card_title{
+            font-size: 15px;
+line-height: 17px;
+letter-spacing: 0.06em;
         }
         /*doation*/
         .donation{
-            padding: 42px 0px;
+            padding-top: 42px;
+            padding-bottom: 41px;
         }
         .donation-content__title{
-            font-size: 20px;
-            line-height: 23px;
+            font-size: 25px;
+            line-height: 32px;
             text-align: center;
             margin: 0 auto;
-            width: 60%;
+            letter-spacing: 0.06em;          
         }
         .donation-content__subtitle{
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0;
             margin: 20px auto;
             text-align: center;
         }
@@ -845,6 +900,10 @@ left:0px;
 .footer-content{
     grid-template-columns: 1fr;
 }
+.footer-contact{
+    column-gap: 30px;
+    margin-bottom: 40px;
+}
 .footer__img{
     grid-column: span 1;
     align-self:end;
@@ -856,7 +915,12 @@ left:0px;
     text-align: center;
     margin-top: 0px;
 }
+.footer-locations{
+   justify-self:center;
+   margin-bottom: 35px;
+}
     }
+    /*alexolga-JSFE2022Q1*/
 
     @media screen and (max-width: 500px) {
         .about__content{
@@ -874,9 +938,12 @@ left:0px;
 
     } 
 @media screen and (max-width: 320px) {
+    .wrapper{
+        width: 300px;
+    }
     .header-body {
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
     }
     .start-screen__content{
         width: 100%;
