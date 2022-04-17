@@ -126,8 +126,7 @@ letter-spacing: 0.06em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   /* gap: 30px;*/
-   column-gap:  40px;
+      column-gap:  40px;
    row-gap: 30px;
     margin-top: 55px;
 }
@@ -370,7 +369,7 @@ margin-bottom: 58px;
     position:relative;
     width: 30px;
     height: 22px;
-    z-index: 30;
+    z-index: 5;
     transition: 0.5s all ease 0s;
     margin: 0px 53px 0px 10px;
         
@@ -416,7 +415,7 @@ margin-bottom: 58px;
 }
 .logo{
     position: relative;
-    z-index: 5;
+    z-index: 4;
 }
 .nav__list {
     flex-direction: column;
@@ -434,32 +433,47 @@ line-height: 160%;
 margin:0 auto;
 }
 .blackout{
-    position: absolute;
+    position:fixed;
     top:0px;
     left: 0px;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 2;
     display: none;
   }
   .blackout-active{
     display: block;
-    background-color:rgba(41, 41, 41, 0.6);
+    background-color:rgba(41, 41, 41, 0.8);
    
   }
   .burger-active::before {
 transform: rotate(90deg);
-left:0px;
+left:-10px;
+top: 15px;
   }
   .burger-active::after {
     transform: rotate(90deg);
-    top:0px;
-    left: 28px;
+    top:15px;
+    left: 10px;
+
       }
       .burger-active span{
         transform: rotate(90deg);
-        top:0px;
-        left: 15px;
+        top:15px;
+        left: 0px;
+      }
+      .burger-active{
+        position: fixed;
+        top: 45px;
+        right: 53px;
+        margin: 0;
+      }
+      .logo-active{
+        position: fixed;
+        z-index: 5;
+        right: 126px;
+        top:30px;
+        margin: 0;
       }
    .look{
         overflow: hidden;      
@@ -492,6 +506,7 @@ letter-spacing: 0.06em;
         justify-self:center;
       }
    .navigation{
+     max-width:340px;
      width: 100%;
    }
    .footer-content{
@@ -506,14 +521,39 @@ letter-spacing: 0.06em;
     line-height: 32px;
         text-align: center;
     letter-spacing: 0.06em;
-   
+    max-width: 278px; ;
+    margin: 0 auto;
     }
     .footer-contact{
       justify-self:center;
+      margin: 0 auto;
+      margin-bottom: 35px;
+      row-gap: 39px;
+      column-gap: 15px;
+      justify-content: center;
     }
-    .footer-locations{
+    .email__link{
+      align-self: center;
       justify-self:center;
     }
+ .ico_email{
+   margin-left: 22px;
+   margin-top: 0px;
+ }
+ .ico_tel{
+  margin-left: 32px;
+  margin-top: 0px;
+ }
+    .footer-locations{
+      justify-self:center;
+      margin-bottom: 38px;
+      row-gap: 38px;
+     
+    }
+    .locotion2{
+      justify-self:start;
+    }
+ 
     .footer__img{
       width: 260px;
       justify-self:center;
