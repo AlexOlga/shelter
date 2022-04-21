@@ -705,9 +705,10 @@ letter-spacing: 0.06em;
     width: 320px;
     height: 100%;
     background-color:#292929;
+   padding-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items:center;
     transition: 0.5s all ease 0s;
 }
 .nav-active{
@@ -720,9 +721,17 @@ letter-spacing: 0.06em;
 .nav__list {
     flex-direction: column;
     padding: 0px;  
+   align-self:center;
+
+}
+.nav__list:first-child{
+    margin-top: 0px;
 }
 .nav__item{
     margin-top: 40px;
+}
+.nav__item:first-child{
+    margin-top: 0px;
 }
 .nav__link{
 font-family: 'Arial';
