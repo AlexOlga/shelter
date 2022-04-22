@@ -1,5 +1,5 @@
 [
-  {
+  {"id":"0",
     "name": "Jennifer",
     "img": "../../assets/images/jennifer.png",
     "type": "Dog",
@@ -10,7 +10,7 @@
     "diseases": ["none"],
     "parasites": ["none"]
   },
-  {
+  {"id":"1",
     "name": "Sophia",
     "img": "../../assets/images/sophia.png",
     "type": "Dog",
@@ -21,7 +21,7 @@
     "diseases": ["none"],
     "parasites": ["none"]
   },
-  {
+  {"id":"2",
     "name": "Woody",
     "img": "../../assets/images/woody.png",
     "type": "Dog",
@@ -32,7 +32,7 @@
     "diseases": ["right back leg mobility reduced"],
     "parasites": ["none"]
   },
-  {
+  {"id":"3",
     "name": "Scarlett",
     "img": "../../assets/images/scarlett.png",
     "type": "Dog",
@@ -43,7 +43,7 @@
     "diseases": ["none"],
     "parasites": ["none"]
   },
-  {
+  {"id":"4",
     "name": "Katrine",
     "img": "../../assets/images/katrine.png",
     "type": "Cat",
@@ -54,7 +54,7 @@
     "diseases": ["none"],
     "parasites": ["none"]
   },
-  {
+  {"id":"5",
     "name": "Timmy",
     "img": "../../assets/images/timmy.png",
     "type": "Cat",
@@ -65,7 +65,7 @@
     "diseases": ["kidney stones"],
     "parasites": ["none"]
   },
-  {
+  {"id":"6",
     "name": "Freddie",
     "img": "../../assets/images/freddie.png",
     "type": "Cat",
@@ -76,7 +76,7 @@
     "diseases": ["none"],
     "parasites": ["none"]
   },
-  {
+  {"id":"7",
     "name": "Charly",
     "img": "../../assets/images/charly.png",
     "type": "Dog",
