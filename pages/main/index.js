@@ -18,7 +18,7 @@ blackout.addEventListener('click', toggleMenu);
 
 
 
-
+/*создание карты*/
 
 function creatCard (item, blok){ 
     let img;
@@ -43,22 +43,6 @@ function creatCard (item, blok){
     btn.innerText ='Learn more';
     card.append(btn);     
 }
-/*Элементы при загрузке окна*/
-/*function geratioFirstCards(){
-  let blok=sliderActive;
-  let prevSet=new Set();
- let numberCard= countCards();
- getQuotes(sliderActive, prevSet);
-let item=sliderActive.querySelectorAll('.pets__card');
-console.log(item);
- /*console.log('indexActiv', indexActiv);
- indexLeft=geratioCards(petsArray, sliderLeft, numberCard,indexActiv);
- console.log(' indexLeft', indexActiv);
-indexRight=geratioCards(petsArray, sliderRight, numberCard,indexActiv); 
-console.log('indexRight', indexActiv);*/
-
-
-
 
 /*из массива petsArray в block добавляется numberCard с индексами отличными от prevSet*/
 function geratioCards(data, blok, numberCard, prevSet){
@@ -178,8 +162,7 @@ function getCardsId(){
       indexRight=indexActiv;
       indexActiv=indexLeft;
       changedItem=sliderLeft;
-      document.querySelector("#slider-active").innerHTML = sliderLeft.innerHTML;
-  
+      document.querySelector("#slider-active").innerHTML = sliderLeft.innerHTML; 
    
     }
     changedItem.innerHTML="";
@@ -191,3 +174,48 @@ function getCardsId(){
 
  mediaQueryTablet.addListener(getFirstQuotes);
  mediaQueryMobile.addListener(getFirstQuotes); 
+ 
+  const popup=document.querySelector('.pop');
+  const closePopBtn=document.querySelector('.pop__close');
+
+  function generatePop(item){
+    const img=document.querySelector('[data-key="img"]');
+    img.src = item.img;
+    const textArray =document.querySelectorAll('[data-key]');
+    textArray.forEach((element)=>{
+      element.textContent = item[element.dataset.key];
+        }); 
+  };
+  async function popOpen(event) {  
+    const quotes = '../../assets/pets.json';
+    const res = await fetch(quotes);
+    const data = await res.json(); 
+    const INDEX=event.target.parentNode.dataset.id;
+    console.log('index',INDEX);
+    const item=data[INDEX];
+    console.log('item', item);
+    generatePop(item);
+        
+    popup.classList.add('pop-active');
+    popup.classList.add('transition-opaque');
+    blackout.classList.add('blackout-active');
+    bodyTeg.classList.add('look');
+   }
+
+
+function popClose() {
+  popup.classList.add('transition-opacity');
+  popup.addEventListener("animationend", (animationEvent) => {
+    if (animationEvent.animationName === "opacity-window") {
+    popup.classList.remove('pop-active');
+    popup.classList.remove('.transition-opaque');
+    blackout.classList.remove('blackout-active');
+    bodyTeg.classList.remove('look');
+    popup.classList.remove('transition-opacity');
+    };
+  });
+  
+};
+
+ sliderActive.addEventListener("click", popOpen);
+ closePopBtn.addEventListener("click", popClose);
