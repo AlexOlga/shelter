@@ -65,7 +65,7 @@ const mediaQueryTablet = window.matchMedia('(max-width: 1279px)');
 const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
 
 function  countCards(){  
-if (mediaQueryMobile.matches) { console.log('mobil'); return 1}
+if (mediaQueryMobile.matches) {return 1}
 else if (mediaQueryTablet.matches) {return 2}
 else {return 3};
 };
@@ -191,11 +191,9 @@ function getCardsId(){
     const res = await fetch(quotes);
     const data = await res.json(); 
     const INDEX=event.target.parentNode.dataset.id;
-    console.log('index',INDEX);
     const item=data[INDEX];
-    console.log('item', item);
     generatePop(item);
-        
+     
     popup.classList.add('pop-active');
     popup.classList.add('transition-opaque');
     blackout.classList.add('blackout-active');

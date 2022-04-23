@@ -372,7 +372,7 @@ margin-bottom: 58px;
     z-index: 5;
     transition: 0.5s all ease 0s;
     margin: 0px 53px 0px 10px;
-        
+    cursor: pointer;    
 }
 .burger::before, .burger::after{
     background-color:#000000;
