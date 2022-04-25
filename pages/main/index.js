@@ -213,8 +213,8 @@ function getCardsId(){
     btnNext.addEventListener("click", moveRight);
   });
 
- mediaQueryTablet.addListener(getFirstQuotes);
- mediaQueryMobile.addListener(getFirstQuotes); 
+ /*mediaQueryTablet.addListener(getFirstQuotes);
+ mediaQueryMobile.addListener(getFirstQuotes); */
  
   const popup=document.querySelector('.pop');
   const closePopBtn=document.querySelector('.pop__close');

@@ -21,47 +21,56 @@ blackout[0].addEventListener('click', toggleMenu);
     const mediaQueryTablet = window.matchMedia('(max-width: 1279px)');
     const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
  
- const arrayDesktop=[[0, 1, 2, 3, 4, 5, 6, 7], 
-                    [7, 6, 5, 4, 3, 2, 1, 0],   
-                    [5, 3, 4, 0, 2, 6, 7, 1],
-                    [2, 7, 0, 6, 1, 3, 5, 4],
-                    [3, 4, 7, 5, 0, 1, 2, 6],
-                    [1, 5, 3, 2, 6, 4, 0, 7],
-                 ] ;
-const   arrayTablet= [[0,1,2,3,4,5],
-                      [5,0,1,2,3,4],
-                    [4,5,0,6,2,7],
-                    [3,4,5,6,1,7],
-                    [2,3,4,7,6,1],
-                    [6,2,3,7,5,0],
-                    [1,6,0,7,4,5],
-                    [7,2,6,0,1,3]]  ;
-const arrayMobile= [[1,	3,	4],
-                    [1,	6,	7],
-                    [0,	4,	7],
-                    [2,	5,	7],
-                    [2,	3,	4],
-                    [1,	5,	7],
-                    [0,	3,	5],
-                    [0,	6,	7],
-                    [2,	3,	6],
-                    [1,	2,	3],
-                    [0,	4,	5],
-                    [1,	4,	5],
-                    [0,	3,	6],
-                    [2,	6,	7],
-                    [1,	5,	6],
-                    [0,	2,	4]];
+ 
 let maxNumber;
+let selectArray=[];
 function  choiceArray(){  
-     if (mediaQueryMobile.matches) {maxNumber=arrayMobile.length;
-                                     return arrayMobile}
-    else if (mediaQueryTablet.matches) {maxNumber=arrayTablet.length;
-                                        return arrayTablet}
-    else {maxNumber=arrayDesktop.length;
-        return arrayDesktop};
+    let allCards=8;
+    let cardsOnPage;
+    let allPages;    
+     if (mediaQueryMobile.matches) {
+        cardsOnPage=3;
+        allPages=16;
+        maxNumber=16;
+        }
+    else if (mediaQueryTablet.matches) {
+        cardsOnPage=6;
+        allPages=8;
+        maxNumber=8;
+    }
+    else {
+        cardsOnPage=8;
+        allPages=6;
+        maxNumber=6;
     };
 
+ let   k=0;
+for (let i=0; i<allPages; i++){
+   selectArray[i]=[];
+for (let j=0; j<cardsOnPage;j++){
+    selectArray[i][j]=k;
+    if (k<(allCards-1)){k++} else {k=0};
+};
+};
+
+for (let i=0; i<allPages; i++){
+ let randomNumber=Math.floor(Math.random() * (allPages-1));
+    for (let j=0; j<randomNumber; j++){
+        let k1=Math.floor(Math.random() * (cardsOnPage));
+    //  console.log('k1',k1);
+        let k2=Math.floor(Math.random() * (cardsOnPage));
+    //  console.log('k2',k2);
+        let item=selectArray[i][k1];
+        selectArray[i][k1]=selectArray[i][k2];
+        selectArray[i][k2]=item;
+    }
+   
+};
+
+    };
+    choiceArray();
+    console.log(selectArray);
+   
 function creatCard (item, blok){ 
     let img;
     let namePet;
@@ -93,7 +102,7 @@ async function getPage(numberPage) {
     const quotes = '../../assets/pets.json';
     const res = await fetch(quotes);
     const data = await res.json(); 
-    let selectArray=choiceArray();
+    /*let selectArray=choiceArray();*/
     let item= selectArray[numberPage];
     item.forEach((elem)=>{
     let infoCard=data[elem];
