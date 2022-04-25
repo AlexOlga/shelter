@@ -79,16 +79,56 @@ async function getQuotes(blok,prevSet) {
     const numberCard= countCards();
    geratioCards(data, blok, numberCard,prevSet);
    }
+   /*новый кусок*/
+ let indexItA=[];
+   let indexItL=[];
+   let indexItR=[];
+   
 
+function ramdomGeneration(max){
+  while (indexItA.length<3){
+    let index=Math.floor(Math.random() * max);
+    if ( !indexItA.includes(index)){
+      indexItA.push(index);
+    };
+  };
+  //console.log('indexItA',indexItA);
+      while (indexItL.length<3){
+    let index=Math.floor(Math.random() * max);
+    if (!indexItL.includes(index) &&  !indexItA.includes(index)){
+      indexItL.push(index);
+    };
+  }
+  //console.log('indexItL',indexItL);
+  while (indexItR.length<3){
+    let index=Math.floor(Math.random() * max);
+    if (!indexItL.includes(index) &&  !indexItA.includes(index)){
+      indexItR.push(index);
+    };
+  }
+  //console.log('indexItR',indexItR);
+  };
+
+  async function randomArray() {  
+    const quotes = '../../assets/pets.json';
+    const res = await fetch(quotes);
+    const data = await res.json(); 
+    const numberCard= countCards();
+     let max=data.length;
+    ramdomGeneration( max);
+  };
+  randomArray();
+
+/**/
    async function getFirstQuotes() {  
     const quotes = '../../assets/pets.json';
     const res = await fetch(quotes);
     const data = await res.json(); 
     const numberCard= countCards();
     let max=data.length;
-    let indexItA=[0,1,2];
+   /* let indexItA=[0,1,2];
     let indexItL=[7,6,5];
-    let indexItR=[3,4,5];
+    let indexItR=[3,4,5];*/
     sliderActive.innerHTML='';
     sliderLeft.innerHTML='';
     sliderRight.innerHTML='';
