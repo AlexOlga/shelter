@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('.burger');
 const menu = document.querySelector('.nav');
-const blackout=document.querySelector('.blackout');
+const blackout=document.querySelectorAll('.blackout');
 const bodyTeg=document.body;
 const navLink=document.querySelector('.nav__list');
 const logo=document.querySelector('.logo');
@@ -8,13 +8,14 @@ const logo=document.querySelector('.logo');
 function toggleMenu(){
     menu.classList.toggle('nav-active');
     hamburger.classList.toggle('burger-active');
-    blackout.classList.toggle('blackout-active');
+    blackout[0].classList.toggle('blackout-active');
     bodyTeg.classList.toggle('look');
     logo.classList.toggle('logo-active');
+   
 }
 hamburger.addEventListener('click',toggleMenu);
 navLink.addEventListener('click',toggleMenu);
-blackout.addEventListener('click', toggleMenu);
+blackout[0].addEventListener('click', toggleMenu);
 
 
 
@@ -192,11 +193,10 @@ function getCardsId(){
     const data = await res.json(); 
     const INDEX=event.target.parentNode.dataset.id;
     const item=data[INDEX];
-    generatePop(item);
-     
+    generatePop(item);     
     popup.classList.add('pop-active');
     popup.classList.add('transition-opaque');
-    blackout.classList.add('blackout-active');
+    blackout[1].classList.add('blackout-active');
     bodyTeg.classList.add('look');
    }
 
@@ -207,7 +207,7 @@ function popClose() {
     if (animationEvent.animationName === "opacity-window") {
     popup.classList.remove('pop-active');
     popup.classList.remove('.transition-opaque');
-    blackout.classList.remove('blackout-active');
+    blackout[1].classList.remove('blackout-active');
     bodyTeg.classList.remove('look');
     popup.classList.remove('transition-opacity');
     };
@@ -217,3 +217,4 @@ function popClose() {
 
  sliderActive.addEventListener("click", popOpen);
  closePopBtn.addEventListener("click", popClose);
+ blackout[1].addEventListener('click', popClose);
