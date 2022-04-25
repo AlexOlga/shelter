@@ -102,7 +102,7 @@ function ramdomGeneration(max){
   //console.log('indexItL',indexItL);
   while (indexItR.length<3){
     let index=Math.floor(Math.random() * max);
-    if (!indexItL.includes(index) &&  !indexItA.includes(index)){
+    if (!indexItR.includes(index) &&  !indexItA.includes(index)){
       indexItR.push(index);
     };
   }
@@ -143,11 +143,11 @@ function ramdomGeneration(max){
  window.addEventListener('load',getFirstQuotes) ;
  const slider=document.querySelector('.slider__content');
 const sliderActive=document.querySelector('#slider-active');
-let indexActiv=new Set ();
+let indexActiv=new Set (indexItA);
 const sliderLeft=document.querySelector('#slider-left');
-let indexLeft=new Set ();
+let indexLeft=new Set (indexItL);
 const sliderRight=document.querySelector('#slider-right');
-let indexRight=new Set ();
+let indexRight=new Set (indexItR);
 
 function getCardsIdBlok(block){
   let setItem= new Set();
