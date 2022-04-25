@@ -62,12 +62,14 @@ function geratioCards(data, blok, numberCard, prevSet){
 
 
 
-const mediaQueryTablet = window.matchMedia('(max-width: 1279px)');
-const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
+/*const mediaQueryTablet = window.matchMedia('(max-width: 1279px)');
+const mediaQueryMobile = window.matchMedia('(max-width: 767px)');*/
 
 function  countCards(){  
-if (mediaQueryMobile.matches) {return 1}
-else if (mediaQueryTablet.matches) {return 2}
+  let win=window.innerWidth;
+
+if (win<768) {return 1}
+else if (win<1280) {return 2}
 else {return 3};
 };
 

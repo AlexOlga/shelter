@@ -18,8 +18,8 @@ navLink.addEventListener('click',toggleMenu);
 blackout[0].addEventListener('click', toggleMenu);
 
 
-    const mediaQueryTablet = window.matchMedia('(max-width: 1279px)');
-    const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
+   /* const mediaQueryTablet = window.matchMedia('(max-width: 1279px)');
+    const mediaQueryMobile = window.matchMedia('(max-width: 767px)');*/
  
  
 let maxNumber;
@@ -27,22 +27,49 @@ let selectArray=[];
 function  choiceArray(){  
     let allCards=8;
     let cardsOnPage;
-    let allPages;    
+    let allPages;  
+    
+  let win=window.innerWidth;
+  if (win<768) {
+    //console.log('mobile');
+    cardsOnPage=3;
+    allPages=16;
+    maxNumber=16;
+    }
+else 
+if (win<1280) {
+  //  console.log('tabel');
+    cardsOnPage=6;
+    allPages=8;
+    maxNumber=8;
+}
+else {
+  //  console.log('dekstop');
+    cardsOnPage=8;
+    allPages=6;
+    maxNumber=6;
+}
+    
+    /*
      if (mediaQueryMobile.matches) {
+        console.log('mobile');
         cardsOnPage=3;
         allPages=16;
         maxNumber=16;
         }
-    else if (mediaQueryTablet.matches) {
+    else 
+    if (mediaQueryTablet.matches) {
+        console.log('tabel');
         cardsOnPage=6;
         allPages=8;
         maxNumber=8;
     }
     else {
+        console.log('dekstop');
         cardsOnPage=8;
         allPages=6;
         maxNumber=6;
-    };
+    };*/
 
  let   k=0;
 for (let i=0; i<allPages; i++){
@@ -109,8 +136,10 @@ async function getPage(numberPage) {
     creatCard (infoCard, container);
     });   
    };
-let pageNumber=1;            
+let pageNumber=1;  
+window.addEventListener('load',choiceArray) ;          
 window.addEventListener('load',getPage(0)) ;
+
 /*открытие popUp*/
 const popup=document.querySelector('.pop');
 const closePopBtn=document.querySelector('.pop__close');
