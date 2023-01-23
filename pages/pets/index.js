@@ -1,4 +1,14 @@
-import {TABLE_WH, MOBILE_WH, DESKTOP_ALL_PAGES, MOBILE_ALL_PAGES, TABLE_ALL_PAGES, MOBILE_CARDS_ON_PAGES, TABLE_CARDS_ON_PAGES, DESKTOP_CARDS_ON_PAGES, ALL_CARDS} from '../constant.js'
+import {
+  TABLE_WH,
+  MOBILE_WH,
+  DESKTOP_ALL_PAGES,
+  MOBILE_ALL_PAGES,
+  TABLE_ALL_PAGES,
+  MOBILE_CARDS_ON_PAGES,
+  TABLE_CARDS_ON_PAGES,
+  DESKTOP_CARDS_ON_PAGES,
+  ALL_CARDS,
+} from "../constant.js";
 const hamburger = document.querySelector(".burger");
 const menu = document.querySelector(".nav");
 const blackout = document.querySelectorAll(".blackout");
@@ -25,7 +35,7 @@ function choiceArray() {
   let allPages;
 
   let win = window.innerWidth;
-  if (win <  MOBILE_WH) {
+  if (win < MOBILE_WH) {
     cardsOnPage = MOBILE_CARDS_ON_PAGES;
     allPages = MOBILE_ALL_PAGES;
     maxNumber = MOBILE_ALL_PAGES;
@@ -51,7 +61,6 @@ function choiceArray() {
       }
     }
   }
-
   for (let i = 0; i < allPages; i++) {
     let randomNumber = Math.floor(Math.random() * (allPages - 1));
     for (let j = 0; j < randomNumber; j++) {

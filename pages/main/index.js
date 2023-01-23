@@ -1,4 +1,10 @@
-import {TABLE_WH, MOBILE_WH, DESKTOP_COUNT, TABLE_COUNT, MOBILE_COUNT } from '../constant.js'
+import {
+  TABLE_WH,
+  MOBILE_WH,
+  DESKTOP_COUNT,
+  TABLE_COUNT,
+  MOBILE_COUNT,
+} from "../constant.js";
 const hamburger = document.querySelector(".burger");
 const menu = document.querySelector(".nav");
 const blackout = document.querySelectorAll(".blackout");
@@ -63,11 +69,11 @@ function countCards() {
   let win = window.innerWidth;
 
   if (win < MOBILE_WH) {
-    return  MOBILE_COUNT;
+    return MOBILE_COUNT;
   } else if (win < TABLE_WH) {
     return TABLE_COUNT;
   } else {
-    return  DESKTOP_COUNT;
+    return DESKTOP_COUNT;
   }
 }
 
